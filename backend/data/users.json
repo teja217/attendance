@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "jbscomc0l",
+    "name": "System Admin",
+    "email": "admin@attendance.com",
+    "password": "$2a$10$WsWjayzzVRMyzv87OwYI7evj5x85WSE9Yey5rpPxFKFRooVQxlmpu",
+    "role": "admin",
+    "createdAt": "2026-07-29T18:26:30.460Z"
+  },
+  {
+    "_id": "jwibzhhad",
+    "name": "Rahul Sharma",
+    "email": "rahul@company.com",
+    "password": "$2a$10$x1SxKxnzUBYEBVwfk29v9e7Upvx26FLtaHM8KH3/Prf07cdQK0D6O",
+    "role": "employee",
+    "createdAt": "2026-07-29T18:26:30.600Z"
+  },
+  {
+    "_id": "l2wf0pjma",
+    "name": "Priya Patel",
+    "email": "priya@company.com",
+    "password": "$2a$10$PKZbuuG0a/epyI24f8q0Z.7kiuiHR7M76RDL0w/U2o5nCcQzKzblu",
+    "role": "employee",
+    "createdAt": "2026-07-29T18:26:30.722Z"
+  },
+  {
+    "_id": "vrmkvdep1",
+    "name": "Amit Verma",
+    "email": "amit@company.com",
+    "password": "$2a$10$03FMukGDZRq7bfKi75X9c.PhaO5VhaC6SpxsWGHn1WteUn2451mxm",
+    "role": "employee",
+    "createdAt": "2026-07-29T18:26:33.980Z"
+  },
+  {
+    "_id": "5fuq8sot5",
+    "name": "Sneha Reddy",
+    "email": "sneha@company.com",
+    "password": "$2a$10$PUTHB7OtNmbAX9aP8pYcYeCOVbGaAto91IwipLNwYyFiR7lsCAxRS",
+    "role": "employee",
+    "createdAt": "2026-07-29T18:26:34.106Z"
+  },
+  {
+    "_id": "ny1dy9180",
+    "name": "Vikram Singh",
+    "email": "vikram@company.com",
+    "password": "$2a$10$2b3S3CjwXjPsYDkovt35w.ZRCzz.mWB6Cj6U7E5IxXcX5GFWLKJZW",
+    "role": "employee",
+    "createdAt": "2026-07-29T18:26:34.243Z"
+  }
+]
