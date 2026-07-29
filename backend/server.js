@@ -17,9 +17,18 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/attendance', require('./routes/attendance'));
 
-// Root endpoint
-app.get('/', (req, res) => {
+const path = require('path');
+
+// Serve frontend build
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+app.get('/api', (req, res) => {
   res.send('Attendance System API is running with RINL custom theme and seeding.');
+});
+
+// Catch-all to serve index.html for React Router
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../frontend', 'dist', 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
