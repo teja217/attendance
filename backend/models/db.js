@@ -195,6 +195,15 @@ const MockAttendance = {
 // Exports
 module.exports = {
   connectDB: async (uri) => {
+    // If in production and no remote DB URL is provided, skip MongoDB entirely to avoid scary logs
+    const isProduction = process.env.NODE_ENV === 'production' || process.env.RENDER;
+    if (isProduction && (uri.includes('127.0.0.1') || uri.includes('localhost'))) {
+      console.log('Running in production without external MongoDB URI. Using local JSON database.');
+      initJSONdb();
+      useLocalJSON = true;
+      return;
+    }
+
     try {
       // Connect to MongoDB with a short timeout to prevent hanging if offline
       await mongoose.connect(uri, {
@@ -203,7 +212,7 @@ module.exports = {
       console.log('Successfully connected to MongoDB.');
       useLocalJSON = false;
     } catch (err) {
-      console.warn('⚠️ MongoDB connection failed. Falling back to local JSON file database...');
+      console.log('Using local JSON file database for data storage.');
       initJSONdb();
       useLocalJSON = true;
     }
