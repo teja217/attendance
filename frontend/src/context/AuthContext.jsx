@@ -7,8 +7,8 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Set backend URL using environment variable, relative path for production, or fallback to localhost
-  const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : 'http://localhost:5000/api');
+  // Force relative path for production (since it's a monolithic deployment), fallback to localhost for dev
+  const API_URL = import.meta.env.PROD ? '/api' : 'http://localhost:5000/api';
 
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
