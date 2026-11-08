@@ -1,4 +1,7 @@
 # RINL STAFF MANAGEMENT SYSTEM (ATTENDANCE PORTAL)
+
+https://rinl-attendance.onrender.com 
+
 ## Software Requirements Specification and Validation Document
 
 **Project type:**
